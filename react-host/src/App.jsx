@@ -6,11 +6,7 @@ import renderReactCounter1 from "react_component_1/counterWrapper";
 import renderReactCounter2 from "react_component_2/counterWrapper";
 import ReactCounter1 from "react_component_1/Counter";
 import ReactCounter2 from "react_component_2/Counter";
-
-
-const a = ReactCounter1;
-const b = ReactCounter2;
-debugger;
+import renderReactCounterByVite from "react_component_by_vite/counterWrapper";
 
 import "./index.scss";
 
@@ -18,11 +14,13 @@ const App = () => {
     const div1Ref = useRef(null);
     const div2Ref = useRef(null);
     const div3Ref = useRef(null);
+    const div4Ref = useRef(null);
 
     useEffect(() => {
         solidCounter(div1Ref.current);
         renderReactCounter1(div2Ref.current);
         renderReactCounter2(div3Ref.current);
+        renderReactCounterByVite(div4Ref.current);
     }, []);
 
     return (
@@ -33,6 +31,7 @@ const App = () => {
             <div ref={div1Ref}></div>
             <div ref={div2Ref}></div>
             <div ref={div3Ref}></div>
+            <div ref={div4Ref}></div>
         </div>
     );
 };

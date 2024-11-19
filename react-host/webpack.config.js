@@ -46,6 +46,7 @@ module.exports = {
         "solid_component": "solid_component@http://localhost:3000/remoteEntry.js",
         "react_component_1": "react_component_1@http://localhost:3001/remoteEntry.js",
         "react_component_2": "react_component_2@http://localhost:3002/remoteEntry.js",
+        "react_component_by_vite": `promise import("http://localhost:3003/assets/remoteEntry.js")`,
       },
       exposes: {},
       shared: {
